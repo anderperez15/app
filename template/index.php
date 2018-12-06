@@ -149,7 +149,7 @@
 			$('#send').click(sendFile);
 		});
 		function sendFile(e){
-			if(!$('input[type=file]')[0].files[0] && procesando){
+			if(!$('input[type=file]')[0].files[0] && !procesando){
 				return ;
 			}
 			$('#message').html('Su video se esta subiendo y procesando, esto puede tardar tiempo! Sea paciente.')
