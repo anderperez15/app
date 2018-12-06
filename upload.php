@@ -16,6 +16,6 @@ if($_FILES['file']['error'] > 0){
     $id = generateRandomString(25);
     $name = $_FILES['file']['name'];
     shell_exec('python3 ./procesador/subproceso.py "'.$name.'" "'.$id.'" > /dev/null 2>&1 &');
-    echo json_encode(array('status'=>200,'message'=> 'Su video se ha procesado','id'=>$id, 'url'=>'/public/videos/'.$id.'.mp4'));
+    echo json_encode(array('status'=>200,'message'=> 'Su video se ha procesado','id'=>$id, 'url'=>'./public/videos/'.$id.'.mp4'));
 }
 ?> 
